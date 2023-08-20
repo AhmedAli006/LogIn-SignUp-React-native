@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 const SignUp = () => {
+  const newLocal = 'hidden';
   return (
     <>
       <View style={s.container}>
@@ -19,7 +20,69 @@ const SignUp = () => {
       <View style={s.container}>
         <Image style={s.bgImg2} source={require('../assets/bgLight.png')} />
       </View>
-        <View style={s.bottomBox}></View>
+      <View style={s.bottomBox}>
+        <View style={s.row}>
+          <View
+            style={{
+              borderRadius: 60,
+              backgroundColor: '#f0f0f0',
+              height: 45,
+              width: 45,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Image
+              source={require('../assets/google.png')}
+              style={{
+                width: 40,
+                height: 35,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              borderRadius: 60,
+              backgroundColor: '#f0f0f0',
+              height: 45,
+              width: 45,
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginHorizontal: 20,
+            }}>
+            <Image
+              source={require('../assets/facebook.png')}
+              style={{
+                width: 25,
+                height: 35,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              borderRadius: 60,
+              backgroundColor: '#f0f0f0',
+              height: 45,
+              width: 45,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Image
+              source={require('../assets/apple.png')}
+              style={{
+                width: 35,
+                height: 35,
+              }}
+            />
+          </View>
+          <View style={s.txtBox}>
+          
+              <Text style={s.signuptxt}>
+              Don't have an account? <Text style={s.span}>Sign Up Here</Text>
+            </Text>
+           
+          </View>
+        </View>
+      </View>
       <View style={s.topBg}>
         <View style={s.inBox}>
           <Text style={s.inBoxTxt}>Create account</Text>
@@ -34,7 +97,6 @@ const SignUp = () => {
         <TouchableOpacity style={s.lgBtn}>
           <Text style={s.lgbtxt}>Sin Up</Text>
         </TouchableOpacity>
-
       </View>
     </>
   );
@@ -46,33 +108,45 @@ const colors = {
   white: ' #f0f0f0',
 };
 
-// const aspectRatio = 900 / 1200;
-// const {width} = Dimensions.get('window');
-// const height = width * (900 / 1200) * 0.61;
-
 const s = StyleSheet.create({
- topBg: {
+  txtBox:{
+    top:90 ,
+right:200,
+  },
+  span: {
+    color: colors.primary,
+  },
+  signuptxt: {
+    color: '#f0f0f0',
+    fontWeight: '300',
+  },
+
+  row: {
+    justifyContent: 'center',
+
+    flexDirection: 'row',
+    position: 'absolute',
+    top: 90,
+    left: 110,
+  },
+
+  topBg: {
     // flex: 1,
     backgroundColor: '#f0f0f0' || colors.white,
     position: 'relative',
     width: '100%',
-   
+
     borderTopRightRadius: 90,
     borderBottomRightRadius: 90,
     borderBottomLeftRadius: 90,
-    
-
   },
-  bottomBox:{
-    width:'100%',
-    height:250,
-    backgroundColor:colors.dark,
+  bottomBox: {
+    width: '100%',
+    height: 280,
+    backgroundColor: colors.dark,
     position: 'absolute',
-    top: 550,
+    top: 530,
     flex: 1,
-
-    
-    
   },
 
   lgbtxt: {
@@ -115,16 +189,16 @@ const s = StyleSheet.create({
     marginVertical: 20,
     textAlign: 'center',
   },
-  
+
   bgImg: {
     width: '100%',
-    height: 150,
+    height: 100,
     borderBottomLeftRadius: 90,
     overflow: 'hidden',
   },
   bgImg2: {
     width: '100%',
-    height: 150,
+    height: 182,
     overflow: 'hidden',
     ...StyleSheet.absoluteFillObject,
   },
