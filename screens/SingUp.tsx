@@ -9,6 +9,7 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
+// import PasswordInp from './passwordInp';
 
 const SignUp = () => {
   const newLocal = 'hidden';
@@ -93,6 +94,7 @@ const SignUp = () => {
         <TextInput style={s.SgInp} placeholder="User Name" />
         <TextInput style={s.SgInp} placeholder="Email" />
         <TextInput style={s.SgInp} placeholder="Password" />
+      {/* <PasswordInp style={s.SgInp}/> */}
 
         <TouchableOpacity style={s.lgBtn}>
           <Text style={s.lgbtxt}>Sin Up</Text>
@@ -126,7 +128,7 @@ right:200,
 
     flexDirection: 'row',
     position: 'absolute',
-    top: 90,
+    top: 130,
     left: 110,
   },
 
@@ -142,10 +144,10 @@ right:200,
   },
   bottomBox: {
     width: '100%',
-    height: 280,
+    height: 300,
     backgroundColor: colors.dark,
     position: 'absolute',
-    top: 530,
+    top: 490,
     flex: 1,
   },
 
